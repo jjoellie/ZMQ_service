@@ -1,0 +1,4 @@
+#!/bin/sh
+# Part 1 - Request-Reply: Server (REP)
+# Usage: ./server <server_id> <port>
+exec python3 "$(dirname "$0")/server.py" "$@"

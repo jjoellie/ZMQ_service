@@ -37,5 +37,12 @@ def main(server_id: str, port: int) -> None:
 
 if __name__ == "__main__":
     srv_id = sys.argv[1] if len(sys.argv) > 1 else "1"
-    srv_port = int(sys.argv[2]) if len(sys.argv) > 2 else 5550
+    if len(sys.argv) > 2:
+        try:
+            srv_port = int(sys.argv[2])
+        except ValueError:
+            print(f"Error: port must be an integer, got '{sys.argv[2]}'", file=sys.stderr)
+            sys.exit(1)
+    else:
+        srv_port = 5550
     main(srv_id, srv_port)

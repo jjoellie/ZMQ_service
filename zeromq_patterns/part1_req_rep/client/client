@@ -1,0 +1,4 @@
+#!/bin/sh
+# Part 1 - Request-Reply: Client (REQ)
+# Usage: ./client
+exec python3 "$(dirname "$0")/client.py" "$@"
